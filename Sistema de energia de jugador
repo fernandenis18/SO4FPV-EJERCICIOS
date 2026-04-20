@@ -1,0 +1,37 @@
+using UnityEditor.Experimental.GraphView;
+using UnityEngine;
+
+public class sistemadeenergiadeljugador : MonoBehaviour
+{
+    private int energiaMaxima = 100;
+    private int costoHabilidad = 50;
+    private int energiaRestante = 100;
+
+    private bool permitirHabilidad = false;
+    void Start()
+    { 
+        if (energiaRestante >= costoHabilidad)
+        {
+            permitirHabilidad = true;
+            Debug.Log("puedes usar la habilidad");
+
+            int resta = energiaMaxima - costoHabilidad;
+
+            Debug.Log("energia restante");
+        }
+        else
+        {
+            permitirHabilidad =  false;
+            Debug.Log("no puedes usar la habilidad");
+        }
+        
+
+        
+        
+       
+    }
+    void Update()
+    {
+        
+    }
+}
