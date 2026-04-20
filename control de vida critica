@@ -1,0 +1,29 @@
+using UnityEditor.Experimental.GraphView;
+using UnityEngine;
+
+public class Controldevidacrítica : MonoBehaviour
+{
+    private bool estaVivo = false;
+    private int vidaActual = 60;
+    private int dañoDelEnemigo = 20; 
+    void Start()
+    {
+      if ( vidaActual == 60)
+      {
+            Debug.Log("jugador estable");
+
+            int resta = vidaActual - dañoDelEnemigo;
+
+            Debug.Log("jugador en peligro");
+      }
+      if (vidaActual <= 0) 
+      {
+            Debug.Log("game over");
+
+      }  
+    } 
+    void Update()
+    {
+        
+    }
+}
