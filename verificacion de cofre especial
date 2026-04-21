@@ -1,0 +1,39 @@
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
+using UnityEngine;
+
+public class Verificacióndecofreespecial : MonoBehaviour
+{
+    private bool tieneLlave = false;
+    private bool espacioDisponible = true;
+    void Start()
+    {
+        if (tieneLlave && espacioDisponible)
+        {
+            Debug.Log("Puedes abrir el cofre especial");
+        }
+        if (tieneLlave && espacioDisponible == false)
+        {
+            Debug.Log("puedes abrir el cofre especial pero no tienes espacio suficiente");
+        }
+        else 
+        { 
+            Debug.Log("no puedes abrir el cofre especial");
+        }
+        if (tieneLlave == false)
+        {
+            Debug.Log("no puedes abrir el cofre especial porque no tienes la llave");
+        }
+        bool puedeAbrirCofre = tieneLlave && espacioDisponible;
+        bool puedeAbrirCofreConAdvertencia = tieneLlave && espacioDisponible == false;
+        //bool notieneLlave = !tieneLlave;
+
+        Debug.Log("puede abrir el cofre especial: " + puedeAbrirCofre);
+        Debug.Log("puede abrir el cofre especial con advertencia: " + puedeAbrirCofreConAdvertencia);
+        //Debug.Log("no puedes abrir el cofre especial: " + notieneLlave);
+    }
+    void Update()
+    {
+        
+    }
+}
